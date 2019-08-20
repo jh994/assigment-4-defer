@@ -25,15 +25,16 @@ First we will need to open and recode the data. I supply the code for this; you 
 
 
 ```{r}
-install.packages("rlang")
+library(rlang)
 library(tidyverse)
-install.packages("tidyverse", dependencies = TRUE)
-Data8 <- read_tsv("C:/Users/User/Documents/datan3/data/UKDA-6614-tab/tab/ukhls_w8/h_indresp.tab")
+
+Data8 <- read_tsv("C:/Users/Jenny/Documents/defer/h_indresp.tab")
+
 
 Data8 <- Data8 %>%
   select(pidp, h_age_dv, h_payn_dv, h_gor_dv)
 
-Stable <- read_tsv("c:/Users/User/Documents/datan3/data/UKDA-6614-tab/tab/ukhls_wx/xwavedat.tab")
+Stable <- read_tsv("C:/Users/Jenny/Documents/defer/xwavedat.tab")
 
 
 Stable <- Stable %>%
